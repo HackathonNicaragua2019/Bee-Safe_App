@@ -1,3 +1,22 @@
-<ion-app>
-  <ion-router-outlet></ion-router-outlet>
-</ion-app>
+<ion-app style="--background: none transparent;">
+    <ion-split-pane> 
+      <ion-menu menuId="custom" class="mainmenu">
+        <ion-content>
+          <ion-row style="margin-top: 30px">
+              <img src="../assets/img/abeja.png" alt="" width="190" height="180" style="margin: 0 auto">
+          </ion-row>
+          <ion-list>
+            <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+              <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
+                <img [src]="[p.icon]" alt="" height="70" width="70" style="margin-right:15px">
+                <ion-label>
+                  {{p.title}}
+                </ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+          </ion-list>
+        </ion-content>
+      </ion-menu>
+      <ion-router-outlet main></ion-router-outlet>
+    </ion-split-pane>
+  </ion-app>

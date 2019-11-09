@@ -1,0 +1,60 @@
+<ion-content class="fondo">
+  <ion-grid>
+    <ion-row>
+        <img src="../../../assets/img/Sin título-2_Mesa de trabajo 1.png" alt="" style="width: 60%; margin-top: 10%; margin-bottom: -10%;">
+    </ion-row>
+    <ion-row>
+        <p class="titulo"> <strong> Bienvenido a </strong></p>
+    </ion-row>
+    <ion-row>
+        <p class="titulo1"> <strong> BEE SAVE </strong></p>
+    </ion-row>
+    <ion-row>
+        <p class="slo">Guia contra la Violencia en Nicaragua</p>
+    </ion-row>
+
+    <!--Contruccion de label eh input-->
+
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating">Nombre</ion-label>
+          <ion-input type="text" [(ngModel)]="name" name="name"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="floating">Apellido</ion-label>
+            <ion-input type="text" [(ngModel)]="apellido" name="name"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="floating">Cédula</ion-label>
+            <ion-input type="text" [(ngModel)]="cedula" name="name"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Correo Electronico</ion-label>
+          <ion-input type="text" [(ngModel)]="email" name="email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password" [(ngModel)]="password" name="password"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="floating">Describe tu situación</ion-label>
+            <ion-textarea type="text" [(ngModel)]="descrip" name="name"></ion-textarea>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="floating">Distrito (Ejemp: Distrito 1)</ion-label>
+            <ion-input type="text" [(ngModel)]="distrito" name="name"></ion-input>
+        </ion-item>    
+      </ion-col>
+    </ion-row>
+    <br>
+    <ion-button expand="block" shape="round" fill="outline" class="boton" color="#67923d" (click)="OnSudmitRegister()">Registrarse</ion-button>
+    <ion-button expand="block" shape="round" fill="outline" class="boton" color="#67923d" (click)="login()">Iniciar Sesión</ion-button>
+  </ion-grid>   
+</ion-content>

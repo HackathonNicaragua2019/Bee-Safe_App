@@ -15,16 +15,20 @@ import { AngularFireModule } from '@angular/fire';
 
 import { AngularFireAuthModule } from '@angular/fire/auth';
 
+import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestore';
+
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
   AngularFireModule.initializeApp(firebaseConfig),
+  AngularFireModule,
   AngularFireAuthModule],
   providers: [
     StatusBar,
     SplashScreen,
+    AngularFirestore,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

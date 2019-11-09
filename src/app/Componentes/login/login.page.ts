@@ -23,5 +23,8 @@ export class LoginPage {
       this.router.navigate(['home']);
     }).catch(err => alert('Los Datos Son Incorrectos o no Existe el Usuario'));
   }
+  registro(){
+    this.router.navigate(['registro'])
+  }
 
 }
