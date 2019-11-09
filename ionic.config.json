@@ -1,0 +1,7 @@
+{
+  "name": "BeeSafe",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

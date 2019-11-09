@@ -1,0 +1,29 @@
+<ion-content class="fondo">
+  <ion-grid>
+    <ion-row>
+        <img src="../../../assets/img/Sin título-2_Mesa de trabajo 1.png" alt="" style="width: 60%; margin-top: 10%; margin-bottom: -10%;">
+    </ion-row>
+    <ion-row>
+        <h1 class="titulo"> <strong> Bienvenido a </strong> <br> <strong> BEE SAVE </strong></h1>
+    </ion-row>
+
+    <!--Contruccion de label eh input-->
+
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating">Correo Electronico</ion-label>
+          <ion-input type="text" [(ngModel)]="email" name="email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input [(ngModel)]="password" type="password" name="password"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <br>
+    <ion-button expand="block" shape="round" fill="outline" class="boton" color="#67923d" (click)="OnSubmitLogin()">Iniciar Seción</ion-button>
+    <ion-button expand="block" shape="round" fill="outline" class="boton" color="#67923d" >Crear Cuenta</ion-button>
+  </ion-grid>   
+</ion-content>
