@@ -16,13 +16,19 @@ export class MapaPage implements OnInit {
   info: any;
   mapa: any;
   
-  constructor(public actionSheetController: ActionSheetController) { }
+  constructor(public actionSheetController: ActionSheetController) {
+    
+  }
 
   ngOnInit() {
   }
   ionViewDidEnter() {
     this.loadmap();
   }
+
+  //capturar
+
+  
 
   loadmap() {
     var map = leaflet.map('map', {
@@ -94,10 +100,11 @@ export class MapaPage implements OnInit {
     
     });
     
-    let marker = new leaflet.marker([13.088079, -86.353878], {icon: this.tempIcon}).bindPopup("Te damos la Bienvenida a JackVideo te ayudaremos y guiaremos si sufres de violencia").addTo(map);
-    let marker1 = new leaflet.marker([13.0807986,-86.3580684], {icon: this.tempIcon}).bindPopup('<img src="../../assets/img/localización-01.png" style="width: 30%;"><br>Te damos la Bienvenida a CoopSEAS, R.L. te ayudaremos y guiaremos si sufres de violencia').addTo(map);
+    let marker = new leaflet.marker([13.092989,-86.3574732], {icon: this.tempIcon}).bindPopup("<ion-card><ion-card-content><img src='../../assets/img/image.jpg' style='width: 200%;'> Te damos la Bienvenida a Alcaldia de Estelí te Ayudaremos y guiaremos si sufres de violencia</ion-card-content></ion-card>").addTo(map);
+    let marker1 = new leaflet.marker([13.0932744,-86.3573974], {icon: this.tempIcon}).bindPopup("<ion-card><ion-card-content><img src='../../assets/img/moderna.png' style='width: 200%;'> Te damos la Bienvenida a MODERNA, R.L. te Ayudaremos y guiaremos si sufres de violencia</ion-card-content></ion-card>").addTo(map);
     
-    let marker2 = new leaflet.marker([13.092796, -86.357488], {icon: this.tempIcon}).bindPopup('<img src="../../assets/img/localización-01.png" style="width: 30%;"><br>Te damos la Bienvenida a Framacia Maria te ayudaremos y guiaremos si sufres de violencia').addTo(map);
+    
+    let marker2 = new leaflet.marker([13.088240, -86.355345], {icon: this.tempIcon}).bindPopup("<ion-card><ion-card-content><img src='../../assets/img/jacvideo.jpg' style='width: 200%;'> Te damos la Bienvenida a Alcaldia de Estelí te Ayudaremos y guiaremos si sufres de violencia</ion-card-content></ion-card>").addTo(map);
     let marker3 = new leaflet.marker([13.081702, -86.364111], {icon: this.tempIcon}).bindPopup("Te damos la Bienvenida te ayudaremos y guiaremos si sufres de violencia").addTo(map);
     let marker4 = new leaflet.marker([13.097637, -86.372530], {icon: this.tempIcon}).bindPopup("Te damos la Bienvenida te ayudaremos y guiaremos si sufres de violencia").addTo(map);
     let marker5 = new leaflet.marker([13.096056, -86.366776], {icon: this.tempIcon}).bindPopup("Te damos la Bienvenida te ayudaremos y guiaremos si sufres de violencia").addTo(map);
