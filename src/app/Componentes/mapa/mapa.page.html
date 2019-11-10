@@ -1,9 +1,24 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>mapa</ion-title>
-  </ion-toolbar>
+  <ion-toolbar class="menu">
+      <ion-buttons slot="start">
+        <ion-menu-button menuToggle="rightMenu"></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+    
 </ion-header>
 
 <ion-content>
+  <div id="map" style="width:100%; height:100%; margin:0"></div>
 
+
+  <!--<ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="share"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="bottom">
+      <img src="../../../assets/img/abeja.png" alt="">
+      <ion-fab-button><ion-icon name="logo-facebook"></ion-icon></ion-fab-button>
+      <ion-fab-button><ion-icon name="logo-facebook"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>-->
 </ion-content>

@@ -1,25 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import leaflet from 'leaflet';
 
-import { ActionSheetController } from '@ioniC/angular';
+import { leaflet } from 'leaflet';
 
 @Component({
-  selector: 'app-mapa',
-  templateUrl: './mapa.page.html',
-  styleUrls: ['./mapa.page.scss'],
+  selector: 'app-map',
+  templateUrl: './map.page.html',
+  styleUrls: ['./map.page.scss'],
 })
-export class MapaPage implements OnInit {
+export class MapPage implements OnInit {
 
   map: any;
   tempIcon: any;
   paradas: any;
   info: any;
   mapa: any;
-  
-  constructor(public actionSheetController: ActionSheetController) { }
+
+  constructor() { }
 
   ngOnInit() {
   }
+  
   ionViewDidEnter() {
     this.loadmap();
   }
@@ -41,35 +41,35 @@ export class MapaPage implements OnInit {
       fillColor: '#f03',
       fillOpacity: 0.2,
       radius: 300
-    }).bindPopup("Zona vulnerable").addTo(map);
+    }).addTo(map);
 
     var circle = leaflet.circle([13.077991,-86.370708], {
       color: 'red',
       fillColor: '#f03',
       fillOpacity: 0.2,
       radius: 500
-    }).bindPopup("Zona vulnerable").addTo(map);
+    }).addTo(map);
 
     var circle = leaflet.circle([13.084756,-86.344624], {
       color: 'red',
       fillColor: '#f03',
       fillOpacity: 0.2,
       radius: 500
-    }).bindPopup("Zona vulnerable").addTo(map);
+    }).addTo(map);
 
     var circle = leaflet.circle([13.095981,-86.344303], {
       color: 'red',
       fillColor: '#f03',
       fillOpacity: 0.2,
       radius: 300
-    }).bindPopup("Zona vulnerable").addTo(map);
+    }).addTo(map);
 
     var circle = leaflet.circle([13.096239,-86.354088], {
       color: 'blue',
       fillColor: 'blue',
       fillOpacity: 0.2,
       radius: 400
-    }).bindPopup("Zona segura").addTo(map);
+    }).addTo(map);
     
 
     var circle = leaflet.circle([13.099943,-86.367420], {
@@ -77,14 +77,14 @@ export class MapaPage implements OnInit {
       fillColor: 'blue',
       fillOpacity: 0.2,
       radius: 400
-    }).bindPopup("Zona segura").addTo(map);
+    }).addTo(map);
 
     var circle = leaflet.circle([13.087274,-86.356872], {
       color: 'blue',
       fillColor: 'blue',
       fillOpacity: 0.2,
       radius: 400
-    }).bindPopup("Zona segura").addTo(map);
+    }).addTo(map);
 
     this.tempIcon = leaflet.icon({
       iconUrl: '../../assets/img/localización-01.png',
@@ -127,44 +127,6 @@ export class MapaPage implements OnInit {
     let inf = new leaflet.marker([13.2046717, -86.3294505], {icon: this.info}).bindPopup("Ruta hacia la cascada y miradores").addTo(map);*/
   }
 
-  async presentActionSheet() {
-    const actionSheet = await this.actionSheetController.create({
-      header: 'Elementos del Mapa',
-      buttons: [{
-        text: 'Delete',
-        role: 'destructive',
-        icon: '../../assets/icon/favicon.png',
-        handler: () => {
-          console.log('Delete clicked');
-        }
-      }, {
-        text: 'Share',
-        icon: 'share',
-        handler: () => {
-          console.log('Share clicked');
-        }
-      }, {
-        text: 'Play (open modal)',
-        icon: 'arrow-dropright-circle',
-        handler: () => {
-          console.log('Play clicked');
-        }
-      }, {
-        text: 'Favorite',
-        icon: 'heart',
-        handler: () => {
-          console.log('Favorite clicked');
-        }
-      }, {
-        text: 'Cancel',
-        icon: 'close',
-        role: 'cancel',
-        handler: () => {
-          console.log('Cancel clicked');
-        }
-      }]
-    });
-    await actionSheet.present();
-  }
   
+
 }

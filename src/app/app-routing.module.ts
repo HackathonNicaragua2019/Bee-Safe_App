@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: 'mapa', loadChildren: './Componentes/mapa/mapa.module#MapaPageModule' },
   { path: 'qr', loadChildren: './Componentes/qr/qr.module#QrPageModule' },
   { path: 'guia', loadChildren: './Componentes/guia/guia.module#GuiaPageModule' },
+  { path: 'map', loadChildren: './map/map.module#MapPageModule' },
 ];
 
 @NgModule({
