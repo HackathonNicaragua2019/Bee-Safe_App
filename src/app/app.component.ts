@@ -13,14 +13,24 @@ export class AppComponent {
 
   public appPages = [
     {
-      title: 'Perfil',
-      url: '/login',
-      icon: '../assets/img/user.png'
+      title: 'GUÍA',
+      url: '/guia',
+      icon: '../assets/img/guia.png'
     },
     {
-      title: 'Mapa',
+      title: 'MAPA',
       url: '/mapa',
-      icon: '../assets/img/user.png'
+      icon: '../assets/img/mapa.png'
+    },
+    {
+      title: 'EXPLORA',
+      url: '/explora',
+      icon: '../assets/img/explora.png'
+    },
+    {
+      title: 'CERRAR SECIÓN',
+      url: '/login',
+      icon: '../assets/img/cerrar sesion.png'
     },
   ];
 

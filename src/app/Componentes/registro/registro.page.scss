@@ -2,7 +2,6 @@ ion-content{
     display: flex;
    justify-content: center;
    align-items: center;
-    --ion-background-color: #f2b632 !important;
 }
 .titulo{
     font-size: 260%;
@@ -24,4 +23,7 @@ p{
     margin-right: auto;
     color: black;
 
+}
+ion-grid{
+    margin-top: 10%;
 }

@@ -1,7 +1,9 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import leaflet from 'leaflet';
 
 import { ActionSheetController } from '@ioniC/angular';
+
 
 @Component({
   selector: 'app-mapa',
@@ -15,10 +17,9 @@ export class MapaPage implements OnInit {
   paradas: any;
   info: any;
   mapa: any;
+  zona: any;
   
-  constructor(public actionSheetController: ActionSheetController) {
-    
-  }
+  constructor(public actionSheetController: ActionSheetController, public router: Router) { }
 
   ngOnInit() {
   }
@@ -26,15 +27,13 @@ export class MapaPage implements OnInit {
     this.loadmap();
   }
 
-  //capturar
-
-  
+  //capturara
 
   loadmap() {
     var map = leaflet.map('map', {
       attributionControl: false,
       center: [13.090651,-86.357484],
-      'zoom': 14,
+      'zoom': 13,
       'layers': [
         leaflet.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             'attribution': 'Map data &copy; OpenStreetMap contributors'
@@ -46,8 +45,24 @@ export class MapaPage implements OnInit {
       color: 'red',
       fillColor: '#f03',
       fillOpacity: 0.2,
-      radius: 300
-    }).bindPopup("Zona vulnerable").addTo(map);
+      radius: 200
+    }).bindPopup("<ion-card><ion-card-content><img src='../../assets/img/genero_r3_c1-200x200.png' style='width: 200%;'>Alerta De violencia Familiar (Roja)</ion-card-content></ion-card>").addTo(map);
+
+    var circle = leaflet.circle([13.077991,-86.370708], {
+      color: 'yellow',
+      fillColor: 'yellow',
+      fillOpacity: 0.2,
+      radius: 200
+    }).bindPopup("<ion-card><ion-card-content><img src='../../assets/img/icono_abusos02.png' style='width: 200%;'>Alerta abuso (Amarrillo)</ion-card-content></ion-card>").addTo(map);
+
+    var circle = leaflet.circle([13.096239,-86.354088], {
+      color: 'green',
+      fillColor: 'green',
+      fillOpacity: 0.2,
+      radius: 200
+    }).bindPopup("<ion-card><ion-card-content><img src='../../assets/img/icono-violencia-fisica.png' style='width: 200%;'>Alerta Robo Forzado (Verde)</ion-card-content></ion-card>").addTo(map);
+
+    /*
 
     var circle = leaflet.circle([13.077991,-86.370708], {
       color: 'red',
@@ -70,12 +85,7 @@ export class MapaPage implements OnInit {
       radius: 300
     }).bindPopup("Zona vulnerable").addTo(map);
 
-    var circle = leaflet.circle([13.096239,-86.354088], {
-      color: 'blue',
-      fillColor: 'blue',
-      fillOpacity: 0.2,
-      radius: 400
-    }).bindPopup("Zona segura").addTo(map);
+    
     
 
     var circle = leaflet.circle([13.099943,-86.367420], {
@@ -90,7 +100,7 @@ export class MapaPage implements OnInit {
       fillColor: 'blue',
       fillOpacity: 0.2,
       radius: 400
-    }).bindPopup("Zona segura").addTo(map);
+    }).bindPopup("Zona segura").addTo(map);*/
 
     this.tempIcon = leaflet.icon({
       iconUrl: '../../assets/img/localización-01.png',
@@ -105,7 +115,7 @@ export class MapaPage implements OnInit {
     
     
     let marker2 = new leaflet.marker([13.088240, -86.355345], {icon: this.tempIcon}).bindPopup("<ion-card><ion-card-content><img src='../../assets/img/jacvideo.jpg' style='width: 200%;'> Te damos la Bienvenida a Alcaldia de Estelí te Ayudaremos y guiaremos si sufres de violencia</ion-card-content></ion-card>").addTo(map);
-    let marker3 = new leaflet.marker([13.081702, -86.364111], {icon: this.tempIcon}).bindPopup("Te damos la Bienvenida te ayudaremos y guiaremos si sufres de violencia").addTo(map);
+    let marker3 = new leaflet.marker([13.081702, -86.364111], {icon: this.tempIcon}).bindPopup("<ion-card><ion-card-content><img src='../../assets/img/coopseas.jpg' style='width: 200%;'> Te damos la Bienvenida a Cooperativa CoopSeas, R.L. de Estelí te Ayudaremos y guiaremos si sufres de violencia</ion-card-content></ion-card>").addTo(map);
     let marker4 = new leaflet.marker([13.097637, -86.372530], {icon: this.tempIcon}).bindPopup("Te damos la Bienvenida te ayudaremos y guiaremos si sufres de violencia").addTo(map);
     let marker5 = new leaflet.marker([13.096056, -86.366776], {icon: this.tempIcon}).bindPopup("Te damos la Bienvenida te ayudaremos y guiaremos si sufres de violencia").addTo(map);
     let marker6 = new leaflet.marker([13.079644, -86.348127], {icon: this.tempIcon}).bindPopup("Te damos la Bienvenida te ayudaremos y guiaremos si sufres de violencia").addTo(map);
@@ -113,7 +123,7 @@ export class MapaPage implements OnInit {
     let marker8 = new leaflet.marker([13.102140, -86.350128], {icon: this.tempIcon}).bindPopup("Te damos la Bienvenida te ayudaremos y guiaremos si sufres de violencia").addTo(map);
 
     this.paradas = leaflet.icon({
-      iconUrl: '../../assets/img/localización-02.png',
+      iconUrl: '../../assets/img/mapa.png',
       iconSize: [25, 40],
       iconAnchor: [20, 91],
       popupAnchor: [-1, -77]
@@ -123,6 +133,7 @@ export class MapaPage implements OnInit {
     let parada = new leaflet.marker([13.092079, -86.355718], {icon: this.paradas}).bindPopup("Benemeritos Centro de Bomberos").addTo(map);
     let parada1 = new leaflet.marker([13.0851555,-86.3547316], {icon: this.paradas}).bindPopup("Cruz Roja").addTo(map);
     let parada2 = new leaflet.marker([13.066248,-86.348674], {icon: this.paradas}).bindPopup("Hospital San Juan de Dios").addTo(map);
+    let parada3 = new leaflet.marker([13.084817, -86.351306], {icon: this.paradas}).bindPopup("Policia Nacional").addTo(map);
 
     /*this.info = leaflet.icon({
       iconUrl: '../../assets/icon/Información-01.png',
@@ -172,6 +183,10 @@ export class MapaPage implements OnInit {
       }]
     });
     await actionSheet.present();
+  }
+
+  informacion(){
+    this.router.navigate(['mapeado'])
   }
   
 }

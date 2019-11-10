@@ -1,9 +1,31 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>qr</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menuToggle="rightMenu"></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
+  <ion-grid>
+    <ion-row class="f" *ngFor="let slide of img">
+      <ion-col>
+        <img [src]="slide" alt="" class="f">
+      </ion-col>
+    </ion-row>
 
+    <ion-row *ngFor="let slide of slide">
+      <ion-col>
+        <p class="letra" [innerHTML]="slide.titulo"></p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngFor="let slide of slide1">
+      <ion-col>
+        <p class="letra1" [innerHTML]="slide.descripcion"></p>
+      </ion-col>
+    </ion-row>
+    <br>
+    <ion-button expand="block" fill="outline" color="#67923d" (click)="regresar()"><ion-icon name="return-left" class="boton"></ion-icon>Regresar</ion-button>
+  </ion-grid>
 </ion-content>

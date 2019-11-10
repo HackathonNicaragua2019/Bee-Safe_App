@@ -3,13 +3,14 @@
       <ion-menu menuId="custom" class="mainmenu">
         <ion-content>
           <ion-row style="margin-top: 30px">
-              <img src="../assets/img/abeja.png" alt="" width="190" height="180" style="margin: 0 auto">
+              <img src="../assets/img/Logo22.png" alt="" width="280" height="70" style="margin: 0 auto;">
           </ion-row>
           <ion-list>
+              <br><br><br>
             <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
               <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
-                <img [src]="[p.icon]" alt="" height="70" width="70" style="margin-right:15px">
-                <ion-label>
+                <img [src]="[p.icon]" alt="" height="40" width="40" style="margin-right:15px">
+                <ion-label style="font-size: 140%;">
                   {{p.title}}
                 </ion-label>
               </ion-item>

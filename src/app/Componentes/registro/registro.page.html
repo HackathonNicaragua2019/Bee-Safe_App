@@ -1,17 +1,13 @@
 <ion-content class="fondo">
   <ion-grid>
     <ion-row>
-        <img src="../../../assets/img/Sin título-2_Mesa de trabajo 1.png" alt="" style="width: 60%; margin-top: 10%; margin-bottom: -10%;">
+      <img src="../../../assets/img/usuario.png" style="width: 60%; display: block; margin: auto;">
     </ion-row>
-    <ion-row>
-        <p class="titulo"> <strong> Bienvenido a </strong></p>
+    
+    <ion-row style="text-align: center !important; display: block; margin: auto; margin-top: -20%;">
+      <h5 style="text-align: center;">INICIAR SESIÓN</h5>
     </ion-row>
-    <ion-row>
-        <p class="titulo1"> <strong> BEE SAVE </strong></p>
-    </ion-row>
-    <ion-row>
-        <p class="slo">Guia contra la Violencia en Nicaragua</p>
-    </ion-row>
+    <br><br><br>
 
     <!--Contruccion de label eh input-->
 
@@ -55,6 +51,6 @@
     </ion-row>
     <br>
     <ion-button expand="block" shape="round" fill="outline" class="boton" color="#67923d" (click)="OnSudmitRegister()">Registrarse</ion-button>
-    <ion-button expand="block" shape="round" fill="outline" class="boton" color="#67923d" (click)="login()">Iniciar Sesión</ion-button>
-  </ion-grid>   
+    <a style="text-align: center;" (click)="login()"><h5>Iniciar Sesión</h5></a>
+  </ion-grid>
 </ion-content>

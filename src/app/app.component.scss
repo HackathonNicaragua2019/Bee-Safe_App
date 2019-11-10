@@ -1,0 +1,17 @@
+.mainmenu{
+    --background: url('../assets/img/fondo_Mesa de trabajo 1.jpg')
+}
+
+.list-md{
+    background: var(--ion-item-background,var(--ion-background-color, transparent));
+}
+
+ion-toolbar, ion-content, ion-list, ion-item{
+    --background: transparent; 
+    --ion-color-base: transparent !important;
+}
+
+ion-item{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}

@@ -17,6 +17,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestore';
 
+import { QRScanner } from '@ionic-native/qr-scanner/ngx';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -28,6 +30,7 @@ import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestor
   providers: [
     StatusBar,
     SplashScreen,
+    QRScanner,
     AngularFirestore,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],

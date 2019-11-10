@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Información del Mapa</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <img src="../../assets/img/travel-2650303_1920.jpg">
+    </ion-row>
+
+    <ion-row>
+      <h2 style="text-align: center;">Significado de Señales en el Mapa</h2>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button style="margin-top: 15%; color: green;" color="success">
+            Verde
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <p>El color verde simboliza que es una alerta con prioridad 1</p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+
+        <ion-col>
+          <ion-button style="margin-top: 15%;" color="warning">
+            Amarillo
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <p>El color amarrillo simboliza que es una alerta con prioridad 2</p>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+          <ion-col>
+            <ion-button style="margin-top: 15%;" color="danger">
+              Rojo
+            </ion-button>
+          </ion-col>
+          <ion-col>
+            <p>El color Rojo simboliza que es una alerta con prioridad 1</p>
+          </ion-col>
+        </ion-row>
+    
+        <ion-row>
+            <ion-col>
+              <img src="../../assets/img/localización-01.png" alt="" style="width: 70% !important;">
+            </ion-col>
+            <ion-col>
+              <p>Esta es una iconografia en el que se pueden encontrar los lugares seguros</p>
+            </ion-col>
+          </ion-row>
+        
+          <ion-row>
+              <ion-col>
+                <img src="../../assets/img/mapa.png" alt="" style="width: 35% !important; margin-left: 15%;">
+              </ion-col>
+              <ion-col>
+                <p>Esta es una iconografia muestra las autoridades competentes</p>
+              </ion-col>
+            </ion-row>
+        
+        <ion-row>
+          <ion-button (click)="retornar()">
+            Retornar
+          </ion-button>
+        </ion-row>
+
+  </ion-grid>
+</ion-content>

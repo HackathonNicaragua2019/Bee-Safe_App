@@ -7,9 +7,12 @@ const routes: Routes = [
   { path: 'login', loadChildren: './Componentes/login/login.module#LoginPageModule' },
   { path: 'registro', loadChildren: './Componentes/registro/registro.module#RegistroPageModule' },
   { path: 'mapa', loadChildren: './Componentes/mapa/mapa.module#MapaPageModule' },
-  { path: 'qr', loadChildren: './Componentes/qr/qr.module#QrPageModule' },
+  { path: 'qr/:id', loadChildren: './Componentes/qr/qr.module#QrPageModule' },
   { path: 'guia', loadChildren: './Componentes/guia/guia.module#GuiaPageModule' },
+  { path: 'explora', loadChildren: './Componentes/explora/explora.module#ExploraPageModule' },
+  { path: 'mapeado', loadChildren: './mapeado/mapeado.module#MapeadoPageModule' },
   { path: 'map', loadChildren: './map/map.module#MapPageModule' },
+  { path: 'violencia', loadChildren: './Componentes/violencia/violencia.module#ViolenciaPageModule' },
 ];
 
 @NgModule({

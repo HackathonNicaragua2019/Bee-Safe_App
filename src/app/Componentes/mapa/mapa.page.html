@@ -3,62 +3,12 @@
       <ion-buttons slot="start">
         <ion-menu-button menuToggle="rightMenu"></ion-menu-button>
       </ion-buttons>
+
+      <ion-button style="float: right !important;" (click)="informacion()">
+          <p>Información del Mapa</p>
+        </ion-button>
     </ion-toolbar>
 </ion-header>
-  <ion-fab vertical="top" horizontal="end" slot="fixed">
-    <ion-button>
-      <p>Información del Mapa</p>
-    </ion-button>
-    <ion-fab-list side="bottom" style="background-color: white;">
-      <ion-grid>
-        <ion-row>
-          <ion-col size="6">
-              <h4 style="text-align: center;">Zona Segura</h4>
-          </ion-col>
-
-          <ion-col size="6">
-              <img src="../../../assets/img/abeja.png" alt="" style="width: 100%;">
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-      <ion-grid>
-          <ion-row>
-            <ion-col size="6">
-                <h6 style="text-align: center;">Zona Vulnerable</h6>
-            </ion-col>
-  
-            <ion-col size="6">
-                <img src="../../../assets/img/localización-01.png" alt="" style="width: 100%;">
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-
-        <ion-grid>
-            <ion-row>
-              <ion-col size="6">
-                  <h4 style="text-align: center;">Policia</h4>
-              </ion-col>
-    
-              <ion-col size="6">
-                  <img src="../../../assets/img/localización-02.png" alt="" style="width: 100%;">
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-        
-          <ion-grid>
-              <ion-row>
-                <ion-col size="6">
-                    <h4 style="text-align: center;">Cruz Roja</h4>
-                </ion-col>
-      
-                <ion-col size="6">
-                    <img src="../../../assets/img/user.png" alt="" style="width: 100%;">
-                </ion-col>
-              </ion-row>
-            </ion-grid>
-    </ion-fab-list>
-  </ion-fab>
-
 <ion-content>
   <div id="map" style="width:100%; height:100%; margin:0"></div>
 </ion-content>
