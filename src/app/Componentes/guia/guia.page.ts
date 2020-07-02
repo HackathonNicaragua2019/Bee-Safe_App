@@ -17,5 +17,15 @@ export class GuiaPage implements OnInit {
   bull(){
     this.router.navigate(['violencia'])
   }
+  ciber(){
+    this.router.navigate(['ciber']);
+  }
+
+  fami(){
+    this.router.navigate(['fami']);
+  }
+  verbal(){
+    this.router.navigate(['verbal']);
+  }
 
 }

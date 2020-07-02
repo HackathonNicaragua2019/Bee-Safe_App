@@ -1,5 +1,8 @@
 <ion-header>
   <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+      </ion-buttons>
     <ion-title>Información del Mapa</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,8 +12,54 @@
     <ion-row>
       <img src="../../assets/img/travel-2650303_1920.jpg">
     </ion-row>
+    <h5 style="text-align: center !important;">Significado de Señales en el Mapa</h5>
 
-    <ion-row>
+    <ion-row padding>
+      <p>El mapa te permite diferentes funciones como:</p>
+      <ol style="text-align: justify;">
+        <li>Puntos de referencia de lugares de apoyo en contra de la violencia</li><br>
+        <li>Zona de Reporte de Eventos de Violencia</li><br>
+        <li>Marcado de Evento de Violencia presionando click en el area del mapa a continuacion le mostrara un mensaje con las coordenadas y posteriormente se presentara un circulo del cual tiene que presionar y enviar la descripción del evento de Violencia</li>
+      </ol>
+    </ion-row>
+
+    <ion-row padding>
+      <ion-col>
+          <img src="../../assets/img/casa.png">
+          <p style="text-align: center;">Sitios de seguridad y apoyo a la Población</p>
+      </ion-col>
+
+      <ion-col>
+          <img src="../../assets/img/PLAN-DE-EMERGENCIAS.png">
+          <p style="text-align: center;">Sitios de Emergencia y seguridad y apoyo a la Población</p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row padding>
+        <ion-col>
+            <img src="../../assets/img/verde.jpg">
+            <p style="text-align: center;">El color verde simboliza que es una alerta con prioridad 1</p>
+        </ion-col>
+  
+        <ion-col>
+            <img src="../../assets/img/ama.jpg" style="width: 90% !important;">
+            <p style="text-align: center;">El color verde simboliza que es una alerta con prioridad 2</p>
+            
+        </ion-col>
+      </ion-row>
+
+      <ion-row padding>
+          <ion-col>
+              <img src="../../assets/img/rojo.jpg">
+            <p style="text-align: center;">El color Rojo simboliza que es una alerta con prioridad 3</p>
+          </ion-col>
+    
+          <ion-col>
+              
+          </ion-col>
+        </ion-row>
+
+    <!--<ion-row>
       <h2 style="text-align: center;">Significado de Señales en el Mapa</h2>
     </ion-row>
 
@@ -64,7 +113,7 @@
               <ion-col>
                 <p>Esta es una iconografia muestra las autoridades competentes</p>
               </ion-col>
-            </ion-row>
+            </ion-row>-->
         
         <ion-row>
           <ion-button (click)="retornar()">

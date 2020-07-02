@@ -13,6 +13,9 @@ const routes: Routes = [
   { path: 'mapeado', loadChildren: './mapeado/mapeado.module#MapeadoPageModule' },
   { path: 'map', loadChildren: './map/map.module#MapPageModule' },
   { path: 'violencia', loadChildren: './Componentes/violencia/violencia.module#ViolenciaPageModule' },
+  { path: 'ciber', loadChildren: './ciber/ciber.module#CiberPageModule' },
+  { path: 'fami', loadChildren: './fami/fami.module#FamiPageModule' },
+  { path: 'verbal', loadChildren: './verbal/verbal.module#VerbalPageModule' },
 ];
 
 @NgModule({

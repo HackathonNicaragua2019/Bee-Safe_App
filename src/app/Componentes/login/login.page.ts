@@ -27,4 +27,8 @@ export class LoginPage {
     this.router.navigate(['registro'])
   }
 
+  home(){
+    this.router.navigate(['home']);
+  }
+
 }

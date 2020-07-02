@@ -16,6 +16,11 @@
 
 <ion-content>
   <ion-grid>
+
+    <ion-row>
+      <img src="../../../assets/img/logo2.png" alt="">
+    </ion-row>
+
     <ion-row >
       <p style="text-align: justify;" padding>La violencia es la utilización de la fuerza física o del poder contra uno mismo o contra otros, de modo que este acto cause daños físicos, daños psicológicos o privaciones. mismo o contra otros, de modo que este acto cuase daños fisicos, daños psicologógicos o privaciones.</p>
     </ion-row>
@@ -30,37 +35,46 @@
 
     <ion-row>
       <ion-col>
-        <img src="../../../assets/img/v1.png" alt="">
+        <img src="../../../assets/img/v1.png" alt="" (click)="fami()">
+        <p style="text-align: center;"> <strong>Violencia Familiar</strong> </p>
       </ion-col>
       <ion-col>
         <img src="../../../assets/img/v2.png" alt="">
+        <p style="text-align: center;"> <strong>Violencia autoinfligida</strong> </p>
       </ion-col>
       <ion-col>
         <img src="../../../assets/img/v3.png" alt="">
+        <p style="text-align: center;"> <strong>Violencia física</strong> </p>
       </ion-col>
     </ion-row>
 
     <ion-row>
         <ion-col>
-          <img src="../../../assets/img/v4.png" alt="">
+          <img src="../../../assets/img/v4.png" alt="" (click)="verbal()">
+          <p style="text-align: center;"> <strong>Violencia verbal</strong> </p>
         </ion-col>
         <ion-col>
           <img src="../../../assets/img/v5.png" alt="">
+          <p style="text-align: center;"> <strong>Violencia sexual</strong> </p>
         </ion-col>
         <ion-col>
           <img src="../../../assets/img/v6.png" alt="">
+          <p style="text-align: center;"> <strong>Violencia laboral</strong> </p>
         </ion-col>
       </ion-row>
 
       <ion-row>
           <ion-col>
-            <img src="../../../assets/img/v7.png" alt="">
+            <img src="../../../assets/img/v7.png" alt="" (click)="ciber()">
+            <p style="text-align: center;"> <strong>Ciberbullying</strong> </p>
           </ion-col>
           <ion-col>
             <img src="../../../assets/img/v8.png" alt="" (click)="bull()">
+            <p style="text-align: center;"> <strong>Bullying</strong> </p>
           </ion-col>
           <ion-col>
             <img src="../../../assets/img/v9.png" alt="">
+            <p style="text-align: center;"> <strong>Violencia  psicológica</strong> </p>
           </ion-col>
         </ion-row>
   </ion-grid>
